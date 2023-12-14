@@ -1,1 +1,2 @@
 .env
+db/sqlc/transfer_test.go
