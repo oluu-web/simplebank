@@ -10,8 +10,8 @@ import (
 
 func TestCreateEntry(t *testing.T) {
 	arg := CreateEntryParams{
-		AccountID: 17,
-		Amount:    20,
+		AccountID: util.RandomInt(2, 100),
+		Amount:    util.RandomMoney(),
 	}
 
 	entry, err := testQueries.CreateEntry(ctx, arg)
@@ -28,7 +28,7 @@ func TestCreateEntry(t *testing.T) {
 
 func createRandomEntry(t *testing.T) Entry {
 	arg := CreateEntryParams{
-		AccountID: util.RandomInt(1, 59),
+		AccountID: util.RandomInt(2, 100),
 		Amount:    util.RandomMoney(),
 	}
 
